@@ -1,0 +1,121 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage[backend=biber, style=numeric-comp, sorting=none, maxnames=5, minnames=5, firstinits=true]{biblatex}
+\DefineBibliographyStrings{english}{
+  andothers = {\mkbibemph{et\addabbrvspace al\adddot}}
+}
+\usepackage{hyperref}
+\addbibresource{bibliography_alf.bib}
+\addbibresource{biblio.bib}
+
+\begin{document}
+
+\section{Analysis of the $B$ anomalies}
+Flavour-changing neutral processes in the Standard Model are heavily suppressed because they are described by electroweak box and penguin loop-diagrams, making them excellent probes of New Physics beyond the Standard Model. These processes, as predicted in the Standard Model, should exhibit Lepton Flavour Universality (LFU). However, experimental measurements of the LFU ratios
+\begin{equation}
+R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)}\,,
+\end{equation}
+measured in LHCb \cite{LHCb:2014vgu,LHCb:2017avl,LHCb:2019hip,LHCb:2021trn,LHCb:2021lvy} and Belle \cite{Belle:2019oag,BELLE:2019xld}, have shown interesting deviations from LFU, with a significance of $3.1\,\sigma$\cite{LHCb:2021trn}. Deviations have also been found in related observables of the angular distribution, such as $P'_5$ \cite{LHCb:2013ghj,LHCb:2014cxe,LHCb:2015svh,LHCb:2016ykl,LHCb:2020lmf,Belle:2016xuo,Belle:2016fev}.
+
+Another set of LFU observables, this time in flavour-changing charged processes, is given by the ratios
+\begin{equation}
+R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)} \tau \nu)}{\mathrm{BR}(B\to D^{(*)} \ell \nu)}\,,
+\end{equation}
+with $\ell$ an average of the light lepton flavours. This set of observables also has shown deviations from LFU, although the significance has decreased as new measurements have been published. After results from BaBar \cite{BaBar:2012obs}, Belle \cite{Belle:2009xqm,Belle:2015qfa,Belle:2016dyj,Belle:2019gij} and LHCb \cite{LHCb:2015gmp,LHCb:2017smo}, the combined significance of the $R_{D^{(*)}}$ anomalies is $3.08\,\sigma$ \cite{HFLAV:2019otj}.
+
+These anomalies in the $B$-mesons have received a lot of attention in the phenomenology community. Both Effective Field Theory analysis and specific New Physics models have been proposed to describe one or both anomalies. For some examples, see \cite{Alda:2018mfy,Alda:2020okk,Alda:2021ruz,Alda:2021rgt,Alda:2021krg} and references therein. Our work in the field so far has focused on global analysis of the anomalies, assessing the impact that deviations from the Standard Model could have in other experimental observables.
+
+\subsection{Research plan}
+Although the phenomenology of the $B$-anomalies is already a mature field, there are still many promising directions in which the research can be extended:
+\begin{enumerate}
+\item Implementation of new LFU observables in the public codes, such as $R_{\Lambda_b}$ in the flavour-changing neutral sector and $R_{J/\psi}$ in the flavour-changing charged sector.
+\item Extension of the global analysis to new classes of observables, such as Higgs observables and superallowed nuclear $\beta$ decays.
+\item Global analysis of different SMEFT operators, with a motivated flavour structure.
+\item Application of the global analysis to promising specific models, such as leptoquarks or ALPs (see next section). 
+\item Updates of any of the aforementioned research directions with new experimental results from LHCb and Belle-II.
+\end{enumerate}
+
+\subsection{Collaboration opportunities}
+This line of research could potentially lead to international collaborations with researchers from several universities:
+\begin{itemize}
+\item Siannah Peñaranda, University of Zaragoza and CAPA, Spain.
+\item Jaume Guasch, University of Barcelona and ICCUB, Spain.
+\item Paride Paradisi, University of Padova and INFN, Italy.
+\end{itemize}
+
+\section{Axion-like particles}
+Axions and axion-like particles (ALPs) are light pseudo-scalar particles that are predicted by many extensions of the Standard Model with an additional global $U(1)$ symmetry which is spontaneously broken at an energy scale $f_a$ \cite{Peccei:1977hh,Wilczek:1977pj,Weinberg:1977ma}. 
+
+In the literature, there are numerous bounds to the ALP parameters coming from astrophysics, cosmology \cite{Cadamuro:2011fd,Millea:2015qra,DiLuzio:2016sbl,Agrawal:2021dbo,Lucente:2021hbp} and particle physics \cite{Mimasu:2014nea,Jaeckel:2015jla,Bauer:2017ris,Brivio:2017ije,Alonso-Alvarez:2018irt,Baldenegro:2018hng,
+Harland-Lang:2019zur,MartinCamalich:2020dfe,DiLuzio:2020oah,Guerrera:2021yss,Gallo:2021ame} (for a comprehensive review, see Ref.~\cite{Irastorza:2018dyq} 
+and references therein). Despite the disparity in energy ranges and experimental setups, most of these observations rely on the fact that the ALP is in the initial or the final state of the process.
+
+In a quantum field theory, the presence of a new particle is felt not only \textit{directly} in the form of new decay channels, but also \textit{indirectly} through the interchange of virtual particles in loop diagrams. In the case of the ALP, this kind of indirect detection has been studied only sporadically in some observables \cite{Bauer:2017nlg,Bauer:2017ris,Marciano:2016yhf,Bauer:2019gfk,Buen-Abad:2021fwq}. My proposal would extend this study of indirect detection in a systematic way.
+
+The crucial point is that the Lagrangian terms describing the interactions between the ALP and the Standard Model particles below $\Lambda = 4\pi f_a$ are dimension-5 effective operators. On the other hand, the SMEFT uses dimension-6 operators. The evolution of the SMEFT operators and their Wilson coefficients under the 1-loop Renormalization Group equations, assuming no New Physics below $\Lambda_\mathrm{SMEFT}$, is known \cite{Jenkins:2013zja,Jenkins:2013wua,Alonso:2013hga,} and implemented in several public codes \cite{Celis:2017hod,Aebischer:2018bkb}. Schematically it can be written as
+\begin{equation}
+\frac{d}{d(\log \mu)}C^{(6)}_i(\mu) = \gamma^{(6)}_{ij}(\mu)C^{(6)}_i(\mu)\,,\label{eq:RGE_d6}
+\end{equation}
+where $\gamma^{(6)}_{ij}(\mu)$ is the anomalous dimension matrix, and depends implicitly on $\mu$ via the parameters of the SM Lagrangian. Eq.~\eqref{eq:RGE_d6} is ``only'' a system of many (2499) first-order homogeneous differential equations, so once the matrix $\gamma^{(6)}_{ij}(\mu)$ is known, the resolution of the system is quite easy.
+
+However, once the ALPs and their dimension-5 operator are added to the mix, Eq.~\eqref{eq:RGE_d6} is no longer valid.  Now, the renormalization of the dimension-6 operators, at the order $\mathcal{O}(\Lambda_\mathrm{SMEFT})$, also includes Feynman diagrams with two insertions of the dimension-5 operators \cite{Manohar:2018aog}. Schematically, the RG Equations now take the form
+\begin{align}
+\frac{d}{d(\log \mu)}C^{(5)}_i(\mu) &= \gamma^{(5)}_{ij}(\mu)C^{(5)}_i(\mu)\,, \nonumber\\
+\frac{d}{d(\log \mu)}C^{(6)}_i(\mu) &= \gamma^{(6)}_{ij}(\mu)C^{(6)}_i(\mu) + \gamma_{ijk}^{(5,5)}(\mu) C_j^{(5)}(\mu) C_k^{(5)}(\mu) \,,
+\end{align}
+with the dimension-5 effective coefficients being the solutions of a system of homogeneous first-order differential equations, while the dimension-6 coefficients are the solutions of a system of inhomogeneous differential equations, with source terms $S_i \equiv \gamma_{ijk}^{(5,5)}(\mu) C_j^{(5)}(\mu) C_k^{(5)}(\mu)$. The interesting thing about inhomogeneous differential equations is that, even if at the scale $\Lambda_\mathrm{SMEFT}$ all the dimension-6 coefficients vanish, at lower energy scales they are radiatively generated by the source terms. The complete set of source terms for the SMEFT operators was recently published \cite{Galda:2021hbr}.
+
+Another modification in the renormalization of the theory is caused by the addition of a new dimensionful parameter, $m_a$, to the Lagrangian. The dimensionful parameters cause  that the coefficients of the dimension-4 SM operators $C^{(4)}$ (e.g. $\lambda$, $m_H^2$, the Yukawa matrices, and the gauge couplings) now are also renormalized by operators of higher dimension,
+\begin{equation}
+\frac{d}{d(\log\mu)} C^{(4)}_i (\mu) = \sum_{\alpha = a, H} m_\alpha^2 \gamma_{ijk,\alpha}^{(5,5\to4)}(\mu) C_j^{(5)}(\mu) C_k^{(5)}(\mu) + m_H^2 \gamma_{ij}^{(6\to4)} C_j^{(6)}(\mu)\,.
+\end{equation}
+
+The dependence on the SMEFT operators was first shown in \cite{Jenkins:2013zja}, while the effect of the dimension-5 ALP operators is in \cite{Galda:2021hbr}.
+
+\subsection{Research plan}
+The RG evolution of the SM parameters and SMEFT operators is already available in public codes. This research project would take the next steps in the study of the ALP Lagrangian,
+\begin{enumerate}
+\item Implementation of the RG Equations for the dimension-5 operators.
+\item Implementation of the modification of the RG for the SM parameters due to the dimension-5 operators.
+\item Implementation of the source terms $S_i$ for the SMEFT operators.
+\item Numerical integration of the resulting differential integrals.
+\item Calculation of the observables defined above the electroweak scale ($Z$-pole precision tests, Higgs observables, etc.), and fit of the ALP parameters to these observables to obtain new bounds.
+\item Analysis of the impact of the dimension-5 ALP operators in the Effective Field Theory below the electroweak scale.
+\item Calculation of the observables defined below the electroweak scale ($B$-physics, kaon physics, nuclear $\beta$ decays, etc.), and global fit to the observables above and below the electroweak scale.
+\end{enumerate}
+
+\subsection{Collaboration opportunities}
+This line of research could potentially lead to international collaborations with researchers from several universities: 
+\begin{itemize}
+\item Siannah Peñaranda, University of Zaragoza and CAPA, Spain.
+\item Javier Redondo, University of Zaragoza and CAPA, Spain, and Max Planck Institut für Physik, Germany.
+\item Stefano Rigolin, University of Padova and INFN, Italy.
+\item Alfredo Guerrera, University of Padova and INFN, Italy.
+\item Maurizio Giannotti, Barry University, USA.
+\end{itemize}
+
+\section{Machine Learning in Flavour Physics}
+
+Flavour physics requires a large number of experimental data and parameter spaces of high dimensionality. In addition, the number of competing New Physics theories poses a problem of model classification and selection. Traditional computational approaches may fall short in this kind of settings. It is precisely in these conditions where Machine Learning and Deep Learning techniques are most useful.
+
+The history of Machine Learning in particle physics is very long and fruitful, specially in experimental settings, where these algorithms are used for tasks such as event selection, tracking, jet classification and substructure, and simulation \cite{Guest:2018yhq,Albertsson:2018maf,Schwartz:2021ftp,Alanazi:2021grv}. 
+
+However, the flavour community has been less enthusiast in the adoption of the Machine Learning paradigm. To our knowledge, only one work has tried to use neural networks to model selection in the context of the $B$-meson anomalies \cite{Bhattacharya:2020vme}. In addition, in our group we have used a Gradient Boosting algorithm to create an approximation of the likelihood function in a global fit \cite{Alda:2021krg}.  
+
+\subsection{Research plan}
+I think that there are many opportunities for Machine Learning studies in the flavour field. In very broad terms, some ideas worth considering are:
+\begin{enumerate}
+\item Evaluation of the performance for different algorithms to approximate functions with many arguments, as is the case of the likelihood function in the global fits.
+\item Construction of efficient functions that produce multiple outputs. An example would be a function that, given some Wilson coefficients, produces an approximation of the likelihood and of the $R_{K^{(*)}}$ and $R_{D^{(*)}} $ ratios. Neural networks with multiple neurons in the final layer would be well-suited for this task.
+\item Generalization of the model classification algorithm presented in \cite{Bhattacharya:2020vme} or similar to larger number of observables and models.
+\item Use of unsupervised methods, such as Generative Adversarial Networks.
+\end{enumerate}
+
+\section{Additional topics and comments}
+Other research topics that I would be interested to participate, even though I have less experience, include validity of Effective Field Theories and extension to dimension-8 operators, flavour structure in the neutrino sector, and the interplay between Higgs and flavour physics. Of course, I will be very open to collaborations and suggestions from other researchers in my future university regarding these or any other research topics.
+
+I use mostly \texttt{Python3}, in conjunction with \texttt{jupyter} notebooks, as coding language. I also have experience in \texttt{Mathematica} and \texttt{C/C++}, and I could adapt to other languages if it were necessary. I am a firm believer in open and transparent software, and specially so in scientific research. For this reason, I keep public \texttt{Github} repositories of all the code used for my work, so anyone can reproduce the results that I obtained. Public repositories also make collaborative coding much easier.
+
+\printbibliography[heading=bibintoc]
+\end{document}
