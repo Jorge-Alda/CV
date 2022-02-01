@@ -1,0 +1,44 @@
+\documentclass{cvf}
+\usepackage{subfiles}
+\usepackage{amsmath,amsfonts}
+\usepackage[backend=biber, style=numeric-comp, sorting=none, maxnames=5, minnames=5, firstinits=true]{biblatex}
+\DefineBibliographyStrings{english}{
+  andothers = {\mkbibemph{et\addabbrvspace al\adddot}}
+}
+\usepackage{hyperref}
+\addbibresource{biblio.bib}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+
+    \vspace{5cm}
+    \par\noindent\rule[1ex]{\textwidth}{1.5pt}
+    {\Huge \begin{tabular}{c}
+            Cover letter
+        \end{tabular} }
+    \par\noindent\rule{\textwidth}{1.5pt}
+    \vspace{2cm}
+    \par\noindent{\Large Jorge \textsc{Alda Gallo}}
+    \vfill
+    February 2022
+\end{center}
+
+
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\chapter{Motivation}
+\subfile{motivation}
+
+\subfile{CV.tex}
+
+\chapter{List of publications}
+\subfile{publications.tex}
+
+\chapter{Statement of research interest}
+\subfile{researchstatement.tex}
+
+\end{document}
