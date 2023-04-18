@@ -3,25 +3,36 @@
 
 \begin{document}
 
+After the discovery of the Higgs boson at the ATLAS and CMS experiments in CERN, all the basic building blocks of the Standard Model (SM) of particle physics have been unveiled. While the SM has proven to be an extremely successful theory to describe our world, there are still some open questions, both in the experimental and in the theoretical fronts. As a phenomelogist, it is interesting to look for answers that solve both at the same time. My main interest is to find a solution to the so-called anomalies that plague the experimental measurements of $B$-meson decays by using axion-like particles (ALPs) that could explain the strong $CP$ problem, or leptoquarks that are predicted in a number of Beyond the Standard Model proposals. Due to the large amount of available experimental data, an statistical analysis is mandatory, and our work with the new Machine Learning techniques have proven to be a valuable tool.
+
+
+
 \section{Analysis of the $B$ anomalies}
 Flavour-changing neutral processes in the Standard Model are heavily suppressed because they are described by electroweak box and penguin loop-diagrams, making them excellent probes of New Physics beyond the Standard Model. These processes, as predicted in the Standard Model, should exhibit Lepton Flavour Universality (LFU). However, experimental measurements of the LFU ratios
 \begin{equation}
 R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)}\,,
 \end{equation}
-measured in LHCb \cite{LHCb:2014vgu,LHCb:2017avl,LHCb:2019hip,LHCb:2021trn,LHCb:2021lvy} and Belle \cite{Belle:2019oag,BELLE:2019xld}, have shown interesting deviations from LFU, with a significance of $3.1\,\sigma$\cite{LHCb:2021trn}. Deviations have also been found in related observables of the angular distribution, such as $P'_5$ \cite{LHCb:2013ghj,LHCb:2014cxe,LHCb:2015svh,LHCb:2016ykl,LHCb:2020lmf,Belle:2016xuo,Belle:2016fev}.
+measured in LHCb \cite{LHCb:2014vgu,LHCb:2017avl,LHCb:2019hip,LHCb:2021trn,LHCb:2021lvy} and Belle \cite{Belle:2019oag,BELLE:2019xld}, showed interesting deviations from LFU, with a significance of $3.1\,\sigma$\cite{LHCb:2021trn}. Deviations have also been found in related observables of the angular distribution, such as $P'_5$ \cite{LHCb:2013ghj,LHCb:2014cxe,LHCb:2015svh,LHCb:2016ykl,LHCb:2020lmf,Belle:2016xuo,Belle:2016fev}. The newest experimental results at LHCb, however, show no evidence of the $R_{K^{(*)}}$ anomaly~\cite{LHCb:2022qnv,LHCb:2022zom}.
 
 Another set of LFU observables, this time in flavour-changing charged processes, is given by the ratios
 \begin{equation}
 R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)} \tau \nu)}{\mathrm{BR}(B\to D^{(*)} \ell \nu)}\,,
 \end{equation}
-with $\ell$ an average of the light lepton flavours. This set of observables also has shown deviations from LFU, although the significance has decreased as new measurements have been published. After results from BaBar \cite{BaBar:2012obs}, Belle \cite{Belle:2009xqm,Belle:2015qfa,Belle:2016dyj,Belle:2019gij} and LHCb \cite{LHCb:2015gmp,LHCb:2017smo}, the combined significance of the $R_{D^{(*)}}$ anomalies is $3.08\,\sigma$ \cite{HFLAV:2019otj}.
+with $\ell$ an average of the light lepton flavours. This set of observables also has shown deviations from LFU. After results from BaBar \cite{BaBar:2012obs}, Belle \cite{Belle:2009xqm,Belle:2015qfa,Belle:2016dyj,Belle:2019gij} and LHCb \cite{LHCb:2015gmp,LHCb:2017smo,LHCb:2023zxo}, the combined significance of the $R_{D^{(*)}}$ anomalies is $3.2\,\sigma$ \cite{HFLAV:2019otj}.
 
 These anomalies in the $B$-mesons have received a lot of attention in the phenomenology community. Both Effective Field Theory analysis and specific New Physics models have been proposed to describe one or both anomalies. For some examples, see \cite{Alda:2018mfy,Alda:2020okk,Alda:2021ruz,Alda:2021rgt,Alda:2021krg} and references therein. Our work in the field so far has focused on global analysis of the anomalies, assessing the impact that deviations from the Standard Model could have in other experimental observables.
+
+A related observable is the ratio
+\begin{equation}
+  R_{J/\psi} = \frac{\mathrm{BR}(B_c\to J/\psi \tau \nu)}{\mathrm{BR}(B_c\to J/\psi \mu \nu)}\,.
+\end{equation}
+At the quark level, this corresponds to a $b\to c\ell\nu$ transition, the same as in the $R_{D^{(*)}}$ case. Therefore, $R_{J/\psi}$ provides an excellent opportunity to corroborate the charged current anomaly. In fact, the LHCb measurement~\cite{LHCb:2017vlu} does show a tension of $2\,\sigma$ with the SM prediction, although the experimental measurement is still affected by large uncertainties. Furthermore, the New Physics effects in $R_{J/\psi}$, in the form of effective field theory contributions, have not been known until recently~\cite{Harrison:2020gvo,Tang:2022nqm}, and they are not yet implemented in public codes. Other $b\to c\ell\nu$ universality ratios being studied at LHCb are $R_{\Lambda_c^+}$~\cite{LHCb:2022piu} and $R_{D_s^{(*)}}$~\cite{Puthumanaillam:2023,Penalva:2023snz}.
+
 
 \subsection{Research plan}
 Although the phenomenology of the $B$-anomalies is already a mature field, there are still many promising directions in which the research can be extended:
 \begin{enumerate}
-\item Implementation of new LFU observables in the public codes, such as $R_{\Lambda_b}$ in the flavour-changing neutral sector and $R_{J/\psi}$ in the flavour-changing charged sector.
+\item Implementation of new LFU observables in the public codes, such as $R_{\Lambda_b}$ in the flavour-changing neutral sector and $R_{J/\psi}$, $R_{\Lambda_c^+}$ and $R_{D_s^{(*)}}$ in the flavour-changing charged sector.
 \item Extension of the global analysis to new classes of observables, such as Higgs observables and superallowed nuclear $\beta$ decays, as well as electroweak observables, and the masses of the top quark and $W$ boson \cite{deBlas:2021wap,deBlas:2022hdk}.
 \item Global analysis of different SMEFT operators, with a motivated flavour structure.
 \item Application of the global analysis to promising specific models, such as leptoquarks or ALPs (see next section). 
@@ -83,7 +94,8 @@ This line of research could potentially lead to international collaborations wit
 \item Siannah Peñaranda, University of Zaragoza and CAPA, Spain.
 \item Javier Redondo, University of Zaragoza and CAPA, Spain, and Max Planck Institut für Physik, Germany.
 \item Stefano Rigolin, University of Padova and INFN, Italy.
-\item Alfredo Guerrera, University of Padova and INFN, Italy.
+\item Alfredo Guerrera, University of Padova and INFN, Italy, and University of Zaragoza, Spain.
+\item Mathieu Kaltschmidt, University of Zaragoza, Spain.
 \item Maurizio Giannotti, Barry University, USA.
 \end{itemize}
 
@@ -109,6 +121,7 @@ This line of research could potentially lead to international collaborations wit
 \begin{itemize}
   \item Siannah Peñaranda, University of Zaragoza and CAPA, Spain.
   \item Ernesto Arganda, Autonomous University of Madrid and IFT, Spain, and National University of La Plata, Argentina.
+  \item Rosa María Sandá Seoane, Autonomous University of Madrid and IFT, Spain.
 \end{itemize}
 
 \section{Additional topics and comments}
